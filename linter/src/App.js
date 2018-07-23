@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SubmitButton from './Components/FormContainer.js';
+import { VetoedWords } from './Services/WordFinder';
 
 class App extends Component {
   render() {
+    VetoedWords("Agressive fun flowers shoes Tackle.  MAN what a great day.")
     return (
       <div className="App">
         <header className="App-header">
