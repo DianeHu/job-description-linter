@@ -9,9 +9,6 @@ class SidePanel extends Component {
         this.state = {
             resultDetails: []
         }
-
-        // const map = { "masculine": ["man", "men"], "what" :["no"]};
-        // this.addVetoedWords(map);
     }
 
     render() {
@@ -20,15 +17,22 @@ class SidePanel extends Component {
         resultDetails.map(x => issuesFound += x.words.length);
         return (
             <div className="card results">
-            <div className="card-body">
-                <h4 className="card-title">Issues</h4>
-                <div className="card-text">{issuesFound} found</div>
-            </div>
+                <div className="card-body">
+                    <div className="card-title title">Issues</div>
+                    <div className="card-text found-count">{issuesFound} found</div>
+                </div>
                 <ul className="list-group list-group-flush">{
                     resultDetails.map(x =>
                         <li className="list-group-item">
                             <div>
-                                {x.words.join()}{x.description && <br /> }{x.description}
+                                <div className="remove-section">
+                                    <div className="subtitle">REMOVE</div>
+                                    {x.words.join(", ")}
+                                </div>
+                                <div className="why-section">
+                                    <div className="subtitle">WHY</div>
+                                    {x.description}
+                                </div>
                             </div>
                         </li>
                     )

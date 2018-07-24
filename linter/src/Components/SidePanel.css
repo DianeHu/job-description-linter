@@ -1,4 +1,21 @@
 .results {
     margin-top:1.5em;
+    font-family: "Segoe UI, Regular";
+    color: #212121;
+    font-size: 13px;
+}
+
+.subtitle {
+    font-size: 10px;
+    color: #666666;
+}
+
+.title {
+    font-size: 18px;
+    font-family: "Segoe UI, Semibold";
+}
+
+.found-count {
+    font-family: "Segoe UI, Light";
 }
 
