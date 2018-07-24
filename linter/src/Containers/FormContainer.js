@@ -4,16 +4,12 @@ class FormContainer extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            jobPosting: ''
-        };
-
         this.handleJobPostingChange = this.handleJobPostingChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleJobPostingChange(event) {
-        this.setState({jobPosting: event.target.value});
+        this.setState({value: event.target.value});
     }
 
     handleSubmit(event) {
@@ -23,13 +19,14 @@ class FormContainer extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
-                    <textarea onChange={this.handleJobPostingChange} />
-                </label>
+                <div className="form-group" class="col-7 mx-auto">
+                    <label htmlFor="jobPosting" ></label>
+                    <textarea className="form-control" id="jobPosting" value={this.props.name} onChange={this.handleJobPostingChange} rows="3"/>
 
-                <br />
+                    <br />
 
-                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                    <input className="btn btn-primary btn-lg" type="submit" value="Submit"/>
+                </div>
             </form>
         )
     }

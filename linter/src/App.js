@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SubmitButton from './Components/FormContainer.js';
 import { VetoedWords } from './Services/WordFinder';
+import FormContainer from "./Containers/FormContainer";
+import NavBar from './Components/NavBar';
 
 class App extends Component {
   render() {
     VetoedWords("Agressive fun flowers shoes Tackle.  MAN what a great day.")
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <div>
+        <header>
+            <NavBar />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
 
-          <SubmitButton />
+          <FormContainer />
       </div>
   );
   }
