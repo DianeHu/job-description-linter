@@ -19,9 +19,9 @@ class FormContainer extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <div className="form-group" class="col-7 mx-auto">
+                <div className="form-group" >
                     <label htmlFor="jobPosting" ></label>
-                    <textarea className="form-control" id="jobPosting" value={this.props.name} onChange={this.handleJobPostingChange} rows="3"/>
+                    <textarea className="form-control" id="jobPosting" value={this.props.name} onChange={this.handleJobPostingChange} rows="15"/>
 
                     <br />
 
