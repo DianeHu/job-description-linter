@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import 'jquery';
 import 'highlight-within-textarea';
+//import 'jquery-highlighttextarea';
 
 class PostDetails extends Component {
     constructor(props) {
@@ -10,6 +12,9 @@ class PostDetails extends Component {
     applyHighlights(event) {
         var text = event.target.value;
         console.log("hit");
+        /*$('textarea').highlightTextarea({
+            words: ['Please']
+        });*/
         $('.highlight').highlightWithinTextarea({
             highlight: 'please' // string, regexp, array, function, or custom object
         });
