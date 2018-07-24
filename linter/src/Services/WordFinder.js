@@ -13,6 +13,11 @@ export function VetoedWords(str) {
         }
     })
 
+    /*var VetoCategories;
+    $.getJSON("../Data/inappropriateWords.json", function(json) {
+        VetoCategories = JSON.parse(json);
+    });*/
+
     var VetoCategories = JSON.parse('{ "Aggressive": ["driven", "outspoken", "aggressive", "tackle"], "Masculine": ["man", "men"], "Hyperbolic": ["rockstar", "rock star", "ninja", "guru"]}');
 
     for(var category in VetoCategories){

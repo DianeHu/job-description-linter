@@ -4,6 +4,9 @@ import { VetoedWords } from './Services/WordFinder';
 import FormContainer from "./Containers/FormContainer";
 import NavBar from './Components/NavBar';
 import SidePanel from './Components/SidePanel';
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
 
 class App extends Component {
   render() {
