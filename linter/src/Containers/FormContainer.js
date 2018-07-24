@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {VetoedWords} from "../Services/WordFinder";
+import PostDetails from "../Components/PostDetails";
 
 class FormContainer extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class FormContainer extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group" >
                     <label htmlFor="jobPosting" ></label>
-                    <textarea className="form-control" id="jobPosting" rows="15"/>
+                    <PostDetails></PostDetails>
                     <br />
                     <input className="btn btn-primary btn-lg" type="submit" value="Submit"/>
                 </div>
