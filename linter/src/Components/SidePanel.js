@@ -11,6 +11,12 @@ class SidePanel extends Component {
         }
     }
 
+    componentDidUpdate(prevProps) {
+        if(!this.areWordMapsEqual(prevProps.highlightCategories, this.props.highlightCategories)) {
+            this.addVetoedWords();
+        }
+    }
+
     render() {
         const { resultDetails } = this.state;
         var issuesFound = 0
@@ -41,19 +47,43 @@ class SidePanel extends Component {
         );
     }
 
-    addVetoedWords(wordMap) {
-        for (var category in wordMap) {
+    addVetoedWords() {
+        const {highlightCategories} = this.props;
+        var detailsList = [];
+        for (var category in highlightCategories) {
             var description = getCategoryDescription(category);
-            this.addResult(category, wordMap[category], description);
+            this.addResult(category, highlightCategories[category], description, detailsList);
         }
+        this.setState({
+            resultDetails: detailsList
+        });
     }
 
-    addResult(header, words, description) {
-        var copiedDetails = this.state.resultDetails;
-        copiedDetails.push({ header: header, words: words, description: description });
-        this.setState({
-            resultDetails: copiedDetails
-        });
+    addResult(header, words, description, detailsList) {
+        detailsList.push({ header: header, words: words, description: description });
+        
+    }
+
+    areWordMapsEqual(oldWordMap, newWordMap) {
+        if (Object.keys(oldWordMap).length != Object.keys(newWordMap).length) {
+            return false;
+        }
+        for(var category in oldWordMap) {
+            var oldList = oldWordMap[category];
+            if(newWordMap[category] == null) {
+                return false;
+            } else if (newWordMap[category].length != oldWordMap[category].length) {
+                return false;
+            } else {
+                var newList = newWordMap[category];
+                for(var i = 0; i < newList.length; i++) {
+                    if(newList[i] != oldList[i]) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
     }
 }
 

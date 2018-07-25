@@ -6,30 +6,38 @@ import {VetoedWords} from "../Services/WordFinder";
 class PostDetails extends Component {
     constructor(props) {
         super(props);
-
+        
         this.applyHighlights = this.applyHighlights.bind(this);
     }
 
     applyHighlights(event) {
+        this.props.vetoedWords(event.target.value);
         var termRay = [];
 
-        var highlightPairs = VetoedWords(event.target.value);
-        for(var i = 0; i < highlightPairs.length; i++){
-            termRay.push(highlightPairs[i].word);
-        }
-
-        var source = event.target.value;
-        var words = source.split(' ');
-        var output = '';
-        $.each(words, function(idx, word) {
-            if ($.inArray(word, termRay) >= 0) {
-                output += '<mark>' + word + '</mark> ';
-            } else {
-                output += word + ' ';
+        const { highlightCategories } = this.props;
+        if (highlightCategories != null) {
+            for(var category in highlightCategories) {
+                for(var i = 0; i < highlightCategories[category].length; i++) {
+                    termRay.push(highlightCategories[category][i]);
+                }
             }
-        });
-
-        document.getElementById("output").innerHTML = output;
+    
+            var source = event.target.value;
+            var words = source.split(' ');
+            var output = '';
+            //$.each(words, function(idx, word) {
+            for(var i = 0; i < words.length; i++) {
+                var word = words[i];
+                var wordToCheck = word.replace(/[.,\#!$%\^&\*;:{}=\_`~()]/g,"")
+                if ($.inArray(wordToCheck, termRay) >= 0) {
+                    output += '<mark>' + word + '</mark> ';
+                } else {
+                    output += word + ' ';
+                }
+            }
+    
+            document.getElementById("output").innerHTML = output;
+        }
 
     }
 

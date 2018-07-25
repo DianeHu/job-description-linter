@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { VetoedWords } from './Services/WordFinder';
-import FormContainer from "./Containers/FormContainer";
+import PostDetails from "./Components/PostDetails";
 import NavBar from './Components/NavBar';
 import SidePanel from './Components/SidePanel';
 import $ from 'jquery';
@@ -9,8 +9,16 @@ window.jQuery = $;
 window.$ = $;
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      highlightCategories: []
+    };
+    this.vetoedWords = this.vetoedWords.bind(this);
+  }
+
   render() {
-    VetoedWords("Agressive fun flowers shoes Tackle.  MAN what a great day.")
+    const { highlightCategories } = this.state;
     return (
       <div>
         <header>
@@ -19,15 +27,22 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <div className="col-sm-7">
-              <FormContainer />
+              <PostDetails vetoedWords={this.vetoedWords} highlightCategories={highlightCategories}/>
             </div>
             <div className="col-sm-5">
-              <SidePanel />
+              <SidePanel highlightCategories={highlightCategories}/>
             </div>
           </div>
         </div>
       </div>
     );
+  }
+
+  vetoedWords(string) {
+    var categories = VetoedWords(string);
+    this.setState({
+      highlightCategories: categories
+    });
   }
 }
 

@@ -1,8 +1,11 @@
+import vetoedWords from '../Data/vetoedWords';
+
+
 export function VetoedWords(str) {
-    str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+    str = str.replace(/[.,\#!$%\^&\*;:{}=\_`~()]/g,"")
     str = str.toLowerCase();
     const stringArray = str.trim().split(" ");
-    var highlightPairs = [];
+    var highlightCategories = [];
 
     var stringMap = new Map();
     stringArray.forEach(s => {
@@ -13,22 +16,18 @@ export function VetoedWords(str) {
         }
     })
 
-    /*var VetoCategories;
-    $.getJSON("../Data/inappropriateWords.json", function(json) {
-        VetoCategories = JSON.parse(json);
-    });*/
-
-    var VetoCategories = JSON.parse('{ "Aggressive": ["driven", "outspoken", "aggressive", "tackle"], "Masculine": ["man", "men"], "Hyperbolic": ["rockstar", "rock star", "ninja", "guru"]}');
-
-    for(var category in VetoCategories){
-        for(var i = 0; i < VetoCategories[category].length; i++){
-            var word = VetoCategories[category][i];
+    for(var category in vetoedWords){
+        var wordList = [];
+        for(var i = 0; i < vetoedWords[category].length; i++){
+            var word = vetoedWords[category][i];
             if(stringMap.has(word) && stringMap.get(word) > 0){
-                var resultsPair = { category, word };
-                highlightPairs.push(resultsPair);
+                wordList.push(word)
             }
+        }
+        if(wordList.length > 0) {
+            highlightCategories[category] = wordList;
         }
     }
 
-    return highlightPairs;
+    return highlightCategories;
 }
