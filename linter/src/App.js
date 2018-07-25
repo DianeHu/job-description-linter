@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Acronyms } from  './Services/Acronyms';
 import { VetoedWords } from './Services/WordFinder';
 import PostDetails from "./Components/PostDetails";
 import NavBar from './Components/NavBar';
@@ -39,7 +40,10 @@ class App extends Component {
   }
 
   vetoedWords(string) {
-    var categories = VetoedWords(string);
+    let categories = VetoedWords(string);
+    const acronyms = Acronyms(string);
+    categories["Acronym"] = acronyms["Acronym"];
+
     this.setState({
       highlightCategories: categories
     });
