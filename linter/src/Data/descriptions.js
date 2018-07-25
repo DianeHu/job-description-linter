@@ -1,4 +1,5 @@
 export var descriptions = {
+    "Acronym": "Use unabbreviated term to provide clarity to all candidates.",
     "Aggressive": "This word has aggressive connotations and can deter female applicants.",
     "Masculine": "This word attracts more male applicants.",
     "Gendered": "This word refers specifically to one gender. Use a gender-neutral term such as they or their instead.",
@@ -11,6 +12,7 @@ export var descriptions = {
 }
 
 export var pluralDescriptions = {
+    "Acronym": "Use unabbreviated terms to provide clarity to all candidates.",
     "Aggressive": "These words have aggressive connotations and can deter female applicants.",
     "Masculine": "These words attract more male applicants.",
     "Gendered": "These words refer specifically to one gender. Use gender-neutral terms such as they or their instead.",
