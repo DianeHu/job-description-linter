@@ -3,12 +3,19 @@ import React, { Component } from 'react';
 class NavBar extends Component {
     render() {
         return (
-            <nav className="nav nav-pills nav-fill">
-                <a className="nav-item nav-link active" href="#">Home</a>
-                <a className="nav-item nav-link disabled" href="#">Explore</a>
-                <a className="nav-item nav-link disabled" href="#">History (soon to come!)</a>
-                <a className="nav-item nav-link disabled" href="#">Suggestions (soon to come!)</a>
-
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <a className="navbar-brand" href="#">Haven't figured out the product name!</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarText">
+                    <ul className="navbar-nav mr-auto">
+                        <li className="nav-item active">
+                            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         )
     }
