@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import 'jquery';
-import {VetoedWords} from "../Services/WordFinder";
+import './Styling/PostDetails.css';
 
 class PostDetails extends Component {
     constructor(props) {
         super(props);
-        
         this.applyHighlights = this.applyHighlights.bind(this);
     }
 
@@ -43,13 +42,22 @@ class PostDetails extends Component {
 
     render() {
         return(
-            <div className="card">
-                <div className="card-body">
-                    <div className="card-header">Job description</div>
-                    <div className="form-group">
-                        <textarea className="highlight form-control" onChange={this.applyHighlights} rows="5"></textarea>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-sm-6">
+                        <div className="card results">
+                            <div className="card-header title">Job Description</div>
+                            <textarea className="highlight form-control" onChange={this.applyHighlights} rows="20"></textarea>
+                        </div>
                     </div>
-                    <div id="output" className="highlighted"></div>
+                    <div className="col-sm-6">
+                        <div className="card results">
+                            <div className="card-header title">Output</div>
+                            <div className="card-body">
+                                <div id="output" className="highlighted"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
