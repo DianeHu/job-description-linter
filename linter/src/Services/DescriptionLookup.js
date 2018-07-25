@@ -1,6 +1,9 @@
-import descriptions from '../Data/descriptions';
+import {descriptions, pluralDescriptions} from '../Data/descriptions';
 
-export function getCategoryDescription(category) {
-    var description = descriptions[category];
-    return description;
+export function getCategoryDescription(category, count) {
+    if(count > 1) {
+        return pluralDescriptions[category];
+    } else {
+        return descriptions[category];
+    }
 }
