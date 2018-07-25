@@ -2,11 +2,13 @@
   "name": "linter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dianehu.github.io/job-description-linter/",
   "dependencies": {
     "@material-ui/core": "^1.4.1",
     "@material-ui/icons": "^2.0.0",
     "ajv": "^6.5.2",
     "bootstrap": "^4.1.3",
+    "gh-pages": "^1.2.0",
     "jquery": "^3.3.1",
     "react": "^16.4.1",
     "react-bootstrap-4": "^0.29.1",
@@ -14,6 +16,8 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
