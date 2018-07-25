@@ -42,8 +42,9 @@ class App extends Component {
   vetoedWords(string) {
     let categories = VetoedWords(string);
     const acronyms = Acronyms(string);
-    categories["Acronym"] = acronyms["Acronym"];
 
+    categories["Acronym"] = acronyms;
+    
     this.setState({
       highlightCategories: categories
     });
