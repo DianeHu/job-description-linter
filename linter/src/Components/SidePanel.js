@@ -23,8 +23,8 @@ class SidePanel extends Component {
         resultDetails.map(x => issuesFound += x.words.length);
         return (
             <div className="card results">
+            <div className="card-header title">Issues</div>
                 <div className="card-body">
-                    <div className="card-title title">Issues</div>
                     <div className="card-text found-count">{issuesFound} found</div>
                 </div>
                 <ul className="list-group list-group-flush">{
