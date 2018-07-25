@@ -24,12 +24,12 @@ class App extends Component {
         <header>
           <NavBar />
         </header>
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
-            <div className="col-sm-7">
+            <div className="col-sm-8">
               <PostDetails vetoedWords={this.vetoedWords} highlightCategories={highlightCategories}/>
             </div>
-            <div className="col-sm-5">
+            <div className="col-sm-4">
               <SidePanel highlightCategories={highlightCategories}/>
             </div>
           </div>
