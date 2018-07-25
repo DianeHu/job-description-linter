@@ -7,7 +7,7 @@ class NavBar extends Component {
                 <a className="nav-item nav-link active" href="#">Home</a>
                 <a className="nav-item nav-link disabled" href="#">Explore</a>
                 <a className="nav-item nav-link disabled" href="#">History (soon to come!)</a>
-                <a className="nav-item nav-link disabled" href="#">Suggestions (soom to come!)</a>
+                <a className="nav-item nav-link disabled" href="#">Suggestions (soon to come!)</a>
 
             </nav>
         )
