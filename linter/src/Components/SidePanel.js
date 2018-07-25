@@ -51,7 +51,7 @@ class SidePanel extends Component {
         const {highlightCategories} = this.props;
         var detailsList = [];
         for (var category in highlightCategories) {
-            var description = getCategoryDescription(category);
+            var description = getCategoryDescription(category, highlightCategories[category].length);
             this.addResult(category, highlightCategories[category], description, detailsList);
         }
         this.setState({

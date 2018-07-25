@@ -24,7 +24,6 @@ class PostDetails extends Component {
             var source = event.target.value;
             var words = source.split(' ');
             var output = '';
-            //$.each(words, function(idx, word) {
             for(var i = 0; i < words.length; i++) {
                 var word = words[i];
                 var wordToCheck = word.replace(/[.,\#!$%\^&\*;:{}=\_`~()]/g,"")
