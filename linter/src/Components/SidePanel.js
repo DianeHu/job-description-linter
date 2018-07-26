@@ -7,18 +7,22 @@ class SidePanel extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            resultDetails: []
+            resultDetails: [],
+            sentiment: 0
         }
     }
 
     componentDidUpdate(prevProps) {
-        if(!this.areWordMapsEqual(prevProps.highlightCategories, this.props.highlightCategories)) {
+        if(!this.areWordMapsEqual(prevProps.highlightCategories, this.props.highlightCategories) || 
+            !(prevProps.sentiment === this.props.sentiment)) {
             this.addVetoedWords();
+            this.addSentiment();
         }
     }
 
     render() {
-        const { resultDetails } = this.state;
+        const resultDetails = this.state.resultDetails;
+        const sentiment = this.state.sentiment;
         var issuesFound = 0
         resultDetails.map(x => issuesFound += x.words.length);
         return (
@@ -43,12 +47,31 @@ class SidePanel extends Component {
                         </li>
                     )
                 }</ul>
+            <div className="card-header title">Sentiment</div>
+            <div className="card-body">
+                <div className="card-text">{sentiment}</div>
+            </div>
             </div>
         );
     }
 
+    addSentiment() {
+        const textSentiment = this.props.sentiment;
+        let convertedTextSentiment = null;
+        if (textSentiment >= 0 && textSentiment < 0.4) {
+            convertedTextSentiment = "negative 😧"
+        } else if (textSentiment >= 0.4 && textSentiment < 0.8) {
+            convertedTextSentiment = "neutral 😐"
+        } else {
+            convertedTextSentiment = "positive 😄"
+        }
+        this.setState({
+            sentiment: convertedTextSentiment
+        });
+    }
+
     addVetoedWords() {
-        const {highlightCategories} = this.props;
+        const highlightCategories = this.props.highlightCategories;
         var detailsList = [];
         for (var category in highlightCategories) {
             var description = getCategoryDescription(category, highlightCategories[category].length);

@@ -11,6 +11,7 @@ class PostDetails extends Component {
 
     applyHighlights(event) {
         this.props.vetoedWords(event.target.value);
+        this.props.sentiment(event.target.value);
         var termRay = [];
 
         const { highlightCategories } = this.props;
