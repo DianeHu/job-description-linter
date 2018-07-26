@@ -41,7 +41,7 @@ class App extends Component {
           </div>
         </div>
         <footer>
-          Feedback? <a href="">Email us!</a><br />
+          Feedback? <a href="mailto:positionassist@microsoft.com">Email us!</a><br />
           <a href="https://garagehackbox.azurewebsites.net/hackathons/1214/projects/70679">OneWeek 2018</a>
         </footer>
       </div>
