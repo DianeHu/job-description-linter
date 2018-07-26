@@ -1,8 +1,10 @@
 .results {
     margin-top:1.5em;
-    font-family: "Segoe UI, Regular";
+    font-family: "Segoe UI";
     color: #212121;
     font-size: 13px;
+    background-color: transparent;
+    border: 0px;
 }
 
 .subtitle {
@@ -12,10 +14,27 @@
 
 .title {
     font-size: 18px;
-    font-family: "Segoe UI, Semibold";
+    font-family: "Segoe UI";
+    font-weight: 700;
+    background-color: transparent;
 }
 
 .found-count {
-    font-family: "Segoe UI, Light";
+    font-family: "Segoe UI";
+    font-weight: 500;
 }
 
+.list-group-item {
+    background-color: transparent;
+    border: 0px;
+}
+
+.subtitle {
+    color: #0078d4;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.sentiment {
+    margin-top: 15px;
+}

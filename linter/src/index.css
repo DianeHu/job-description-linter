@@ -2,4 +2,33 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #eaeaea !important;
+}
+
+.navBar-header {
+  background-color: #000;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-brand, .navbar-toggler-icon, .navbar-toggler, .navbar-nav, .nav-link {
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: #eaeaea;
+}
+
+.issues {
+  border-left: 1px rgba(0, 0, 0, 0.125) solid;
+}
+
+footer {
+  font-family: "Segoe UI";
+  font-size: 10pt;
+  text-align: center;
+  margin-top: 30px;
 }

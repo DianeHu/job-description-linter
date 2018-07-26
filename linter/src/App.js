@@ -35,11 +35,15 @@ class App extends Component {
             <div className="col-sm-8">
               <PostDetails sentiment={this.sentiment} vetoedWords={this.vetoedWords} highlightCategories={highlightCategories}/>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 issues">
               <SidePanel highlightCategories={highlightCategories} sentiment={sentiment}/>
             </div>
           </div>
         </div>
+        <footer>
+          Feedback? <a href="">Email us!</a><br />
+          <a href="https://garagehackbox.azurewebsites.net/hackathons/1214/projects/70679">OneWeek 2018</a>
+        </footer>
       </div>
     );
   }
