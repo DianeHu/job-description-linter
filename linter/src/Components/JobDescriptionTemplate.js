@@ -23,12 +23,12 @@ class JobDescriptionTemplate extends Component {
                     <NavBar />
                 </header>
                 <div className="container-fluid">
-                    <div className="container">
+                    <div className="container col-sm-4">
                         <div className="alert alert-light" role="alert">
                             Do you want to create a custom job description template?
                         </div>
                     </div>
-                    <div className="container" >
+                    <div className="container col-sm-4" >
                         <a className="nav-link" href="/job-description-template-creation">
                             <button type="button" className="btn btn-primary btn-block" >Yes!</button>
                         </a>

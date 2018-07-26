@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="accdda3a-7edf-4a8d-ab86-4648dff8b897" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplateCreation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linter/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/linter/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/linter/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linter/src/Components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/linter/src/Components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linter/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/linter/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,24 +28,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1027" />
+          <entry key="js" value="3125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1027" />
+          <entry key="JavaScript" value="3125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="js" value="6" />
+          <entry key="js" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="JavaScript" value="6" />
+          <entry key="JavaScript" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -58,17 +56,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linter/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+            <state relative-caret-position="233">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplate.js">
+        <entry file="file://$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplateCreation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
+            <state relative-caret-position="137">
+              <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -77,15 +87,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/linter/src/App.test.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linter/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="120">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -93,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linter/src/Components/PostDetails.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="249">
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="50" selection-end-column="26" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -103,15 +108,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/linter/src/Components/SidePanel.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/linter/src/Services/WordFinder.js">
+        <entry file="file://$PROJECT_DIR$/linter/src/Components/SidePanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="46" lean-forward="true" selection-start-column="46" selection-end-column="46" />
+            <state relative-caret-position="122">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -126,19 +126,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/linter/src/Components/SidePanel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linter/src/Components/NavBar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="85" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="85" />
+            <state relative-caret-position="210">
+              <caret line="14" column="105" selection-start-line="14" selection-start-column="105" selection-end-line="14" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -150,6 +141,11 @@
       <find>output</find>
       <find>highlightCategorieshighlightCategories</find>
       <find>onclick</find>
+      <find>job description</find>
+      <find>componentDidUpdate</find>
+      <find>text</find>
+      <find>responsibilities</find>
+      <find>handleClickResponsibilitiesConfirm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,9 +159,10 @@
         <option value="$PROJECT_DIR$/linter/public/index.html" />
         <option value="$PROJECT_DIR$/linter/package.json" />
         <option value="$PROJECT_DIR$/linter/src/App.js" />
-        <option value="$PROJECT_DIR$/linter/src/index.js" />
         <option value="$PROJECT_DIR$/linter/src/Components/NavBar.js" />
+        <option value="$PROJECT_DIR$/linter/src/index.js" />
         <option value="$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplate.js" />
+        <option value="$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplateCreation.js" />
       </list>
     </option>
   </component>
@@ -318,7 +315,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12490000" />
+    <option name="totallyTimeSpent" value="19946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-74" y="46" width="1440" height="821" extended-state="0" />
@@ -349,6 +346,18 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplateCreation.js</url>
+          <line>78</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -387,27 +396,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linter/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/linter/src/Components/SidePanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/linter/src/App.test.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/linter/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/linter/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        <state relative-caret-position="120">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -421,6 +423,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/linter/src/Components/SidePanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linter/src/Components/NavBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="105" selection-start-line="14" selection-start-column="105" selection-end-line="14" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/linter/src/Containers/FormContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -430,25 +446,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/linter/src/Components/PostDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="249">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="50" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linter/src/Components/NavBar.js">
+    <entry file="file://$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="85" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="85" />
+        <state relative-caret-position="382">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplate.js">
+    <entry file="file://$PROJECT_DIR$/linter/src/Components/JobDescriptionTemplateCreation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
+        <state relative-caret-position="137">
+          <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
