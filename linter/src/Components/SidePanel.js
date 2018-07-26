@@ -47,7 +47,7 @@ class SidePanel extends Component {
                         </li>
                     )
                 }</ul>
-            <div className="card-header title">Sentiment</div>
+            <div className="card-header title sentiment">Sentiment</div>
             <div className="card-body">
                 <div className="card-text">{sentiment}</div>
             </div>
