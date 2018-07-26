@@ -8,7 +8,7 @@ class SidePanel extends Component {
         super(props);
         this.state = {
             resultDetails: [],
-            sentiment: 0
+            sentiment: "N/A"
         }
     }
 
@@ -59,11 +59,13 @@ class SidePanel extends Component {
         const textSentiment = this.props.sentiment;
         let convertedTextSentiment = null;
         if (textSentiment >= 0 && textSentiment < 0.4) {
-            convertedTextSentiment = "negative 😧"
+            convertedTextSentiment = "negative 😧";
         } else if (textSentiment >= 0.4 && textSentiment < 0.8) {
-            convertedTextSentiment = "neutral 😐"
+            convertedTextSentiment = "neutral 😐";
+        } else if (textSentiment >= 0.8){
+            convertedTextSentiment = "positive 😄";
         } else {
-            convertedTextSentiment = "positive 😄"
+            convertedTextSentiment = "N/A";
         }
         this.setState({
             sentiment: convertedTextSentiment

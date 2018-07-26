@@ -15,7 +15,8 @@ class App extends Component {
     super(props);
     this.state = {
       highlightCategories: [],
-      sentiment: 0
+      sentiment: 0,
+      lastIntervalId: null
     };
     this.vetoedWords = this.vetoedWords.bind(this);
     this.sentiment = this.sentiment.bind(this);
@@ -58,11 +59,22 @@ class App extends Component {
   }
 
   sentiment(string) {
-    let textSentiment = getSentiment(string);
+    let lastIntervalId = this.state.lastIntervalId;
+    getSentiment(string, lastIntervalId, state => this.setSentimentState(state), intervalId => this.setIntervalId(intervalId));
+  }
+
+  setSentimentState(sentimentValue) {
     this.setState({
-      sentiment: textSentiment
+      sentiment: sentimentValue,
     });
   }
+
+  setIntervalId(intervalId) {
+    this.setState({
+      lastIntervalId: intervalId
+    });
+  }
+
 }
 
 export default App;

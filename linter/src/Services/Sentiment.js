@@ -1,16 +1,6 @@
 import $ from 'jquery';
 
-export function getSentiment(text){
-    let ajaxResult = null;
-    let payload = {
-        "documents": [
-          {
-            "language": "en",
-            "id": "1",
-            "text": text
-          }
-        ]
-      }
+export function callSentimentAPI(payload, onSentimentScored) {
     $.ajax({
         type: "POST",
         beforeSend: function(request) {
@@ -20,9 +10,31 @@ export function getSentiment(text){
         url: 'https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment',
         data: JSON.stringify(payload),
         success: function (result) {
-            ajaxResult = result;
+            if (result.documents.length > 0) {
+                onSentimentScored(result.documents[0].score);
+            } else {
+                onSentimentScored(-1);
+            }
         },
-        async: false
+        async: true
     });
-    return ajaxResult.documents[0].score;
+}
+
+
+export function getSentiment(text, lastIntervalId, onSentimentScored, onIntervalCreated){
+    if (lastIntervalId !== null) {
+        clearTimeout(lastIntervalId);
+    } 
+    let payload = {
+        "documents": [
+          {
+            "language": "en",
+            "id": "1",
+            "text": text
+          }
+        ]
+      }
+    let intervalId = setTimeout(function () {callSentimentAPI(payload, onSentimentScored)}, 400);
+    onIntervalCreated(intervalId);
+    return;
 }
